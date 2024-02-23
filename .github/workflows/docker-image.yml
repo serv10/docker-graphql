@@ -31,5 +31,5 @@ jobs:
       - name: Push Docker Image
         run: |
           echo "Inciando docker push"
-          docker push serv1008/docker-graphql:0.0.2 .
+          docker push serv1008/docker-graphql:0.0.2
           echo "Fin docker push"
