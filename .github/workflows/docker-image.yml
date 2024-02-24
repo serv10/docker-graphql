@@ -36,6 +36,8 @@ jobs:
           docker build -t serv1008/docker-graphql:$NEW_VERSION .
           docker build -t serv1008/docker-graphql:latest .
       - name: Push Docker Image
+        env:
+          NEW_VERSION: ${{steps.version.outputs.version}}
         run: |
           docker push serv1008/docker-graphql:$NEW_VERSION
           docker push serv1008/docker-graphql:latest
